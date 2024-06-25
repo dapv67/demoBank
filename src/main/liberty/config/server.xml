@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<server description="new server">
+    <featureManager>
+        <feature>servlet-6.0</feature>
+        <feature>springBoot-3.0</feature>
+    </featureManager>
+
+
+    <httpEndpoint host="*" httpPort="9081" httpsPort="9444"/>
+
+    <springBootApplication id="spring-liberty" location="demoBank-0.0.1-SNAPSHOT.war" name="demoBank">
+        <applicationArgument>--server.servlet.context-path=/demoBank</applicationArgument>
+    </springBootApplication>
+</server>
+
